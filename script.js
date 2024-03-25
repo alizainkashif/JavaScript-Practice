@@ -147,11 +147,11 @@ console.log(PyString('orld'))
 // 22. Write a JavaScript program to remove a character 
 // at the specified position in a given string and return the modified string.
 
-function removeString(string,number) {
-    let result = removeString(string,number)
-    console.log(result)
-}
-removeString('hello',3);
+// function removeString(string,number) {
+//     let result = removeString(string,number)
+//     console.log(result)
+// }
+// removeString('hello',3);
 
 // 25. Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.  
 
@@ -197,4 +197,37 @@ function sumRange(a,b) {
   }
   console.log(sumRange(35,33))
 
-  
+//   40. Write a JavaScript program to check from two given integers
+//  whether one of them is 8 or their sum or difference is 8.  
+
+function Check(firstInt,secondInt) {
+    let result = (firstInt + secondInt == 8 || firstInt - secondInt == 8 || firstInt == 8 || secondInt == 8) ? true : false ;
+    return result;
+} 
+
+console.log(Check(43,35));
+
+// 48. Write a JavaScript program to reverse a given string.  
+
+let sampleString = 'Programmers';
+let reverseString = sampleString.split('').reverse().join('')
+console.log(reverseString)
+
+// 50. Write a JavaScript program to capitalize the first letter of each word in a given string.
+
+function Capitalize(string) {
+    let toarray = string.split(' ')
+
+    for(let i = 0;i< toarray.length;i++) {
+        toarray[i] = toarray[i].charAt(0).toUpperCase() + toarray[i].slice(1)
+    }
+    console.log(toarray)
+}
+
+Capitalize('hello world');
+
+// 51. Write a JavaScript application that transforms a provided numerical value into hours and minutes.
+
+function Conversion(number) {
+    let value = Math.floor(number / 60)
+}
