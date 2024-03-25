@@ -231,3 +231,54 @@ Capitalize('hello world');
 function Conversion(number) {
     let value = Math.floor(number / 60)
 }
+
+
+// Error Handling Questions 
+
+// 1. Write a JavaScript function that takes a number as a parameter and
+//  throws a custom 'Error' if the number is not an integer.
+
+function customError(int) {
+    let result = (typeof(int) === 'number') ? console.log('okay') : new Error('Entered value is not integer');
+    console.log(result)
+}
+
+customError('ss')
+
+
+// 2. Write a JavaScript program that uses a try-catch block to catch and
+//  handle a 'TypeError' when accessing a property of an undefined object.
+
+try {
+    let undefinedObject;
+    console.log(undefinedObject.someProperty);
+} catch (error) {
+    if (error instanceof TypeError) {
+        console.log("Caught a TypeError:", error.message);
+    } else {
+        console.log("An error occurred:", error.message);
+    }
+}
+
+// 3. Write a JavaScript function that accepts two numbers as parameters and
+//  throws a custom 'Error' if the second number is zero.
+
+function secondZero(firstNumber,secondNumber) {
+    return (secondNumber === 0) ? Error('secondNumber is Equal to zero') : console.log('Not Equal to zero')
+}
+
+console.log(secondZero(4,0))
+
+// 5. Write a JavaScript function that takes an array as a parameter and
+//  throws a custom 'Error' if the array is empty.
+
+function emptyError(array) {
+    return (array.length === 0) ? Error('Length is Equal to zero') : console.log('Length is Not Equal to zero');
+}
+
+console.log(emptyError([]))
+
+
+
+
+
